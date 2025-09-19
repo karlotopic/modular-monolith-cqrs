@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: 'postgres:15'
+    container_name: db
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env
+  postgres-test:
+    image: 'postgres:15'
+    profiles: ['test']
+    container_name: db-test
+    ports:
+      - '5435:5432'
+    environment:
+      - POSTGRES_USER=db_test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=testdb
