@@ -46,10 +46,6 @@ describe('Auth flows', () => {
     await setupApp();
   });
 
-  afterAll(async () => {
-    await module.close();
-  });
-
   describe('Login flow', () => {
     describe('when user does not exist', () => {
       it('should fail and throw', async () => {

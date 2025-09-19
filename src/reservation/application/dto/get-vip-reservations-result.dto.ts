@@ -1,15 +1,15 @@
 import { IQueryResult } from '@nestjs/cqrs';
 import { ApiProperty } from '@nestjs/swagger';
 
-class VipReservationResult {
-  @ApiProperty()
+export class VipReservationResult {
+  @ApiProperty({ example: 'property-uuid' })
   propertyId: string;
 
-  @ApiProperty()
+  @ApiProperty({ example: 3 })
   vipReservationCount: number;
 }
 
 export class GetVipReservationsResult implements IQueryResult {
-  @ApiProperty()
+  @ApiProperty({ type: [VipReservationResult] })
   data: VipReservationResult[];
 }

@@ -37,10 +37,6 @@ describe('User management (e2e)', () => {
     await setupApp();
   });
 
-  afterAll(async () => {
-    await module.close();
-  });
-
   describe('Register flow', () => {
     describe('when user already exists', () => {
       beforeAll(async () => {

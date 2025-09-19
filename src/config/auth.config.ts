@@ -1,23 +1,9 @@
 import { registerAs } from '@nestjs/config';
 import { z } from 'zod';
 
-const authSchema = z.object({
-  domain: z.string(),
-  // audience: z.string(),
-  connection: z.string(),
-  clientId: z.string(),
-  clientSecret: z.string(),
-  // managementApiIdentifier: z.string(),
-});
+const authSchema = z.object({});
 
 export default registerAs('auth', () => {
-  const config = authSchema.parse({
-    domain: process.env.AUTH0_DOMAIN,
-    // audience: process.env.AUTH0_API_IDENTIFIER,
-    connection: 'Username-Password-Authentication',
-    clientId: process.env.AUTH0_CLIENT_ID,
-    clientSecret: process.env.AUTH0_CLIENT_SECRET,
-    // managementApiIdentifier: process.env.AUTH0_MANAGEMENT_API_IDENTIFIER,
-  });
+  const config = authSchema.parse({});
   return config;
 });

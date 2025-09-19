@@ -48,10 +48,6 @@ describe('Reservation (e2e)', () => {
     await setupApp();
   });
 
-  afterAll(async () => {
-    await module.close();
-  });
-
   describe('Get Vip reservations flows', () => {
     let accessToken: string;
 
