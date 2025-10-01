@@ -1,8 +1,6 @@
 ## Description
 
-Numa Senior software engineer take home project.
-
-TO DO: Expand the Readme file
+Sample project illustrating a modular monolith architecture implementing CQRS within an Onion Architecture design.
 
 ## Project setup
 
